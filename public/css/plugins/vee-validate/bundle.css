@@ -1,0 +1,8 @@
+.help{display:block;font-size:11px;margin-top:5px}
+.help.is-primary{color:#00d1b2}
+.help.is-info{color:#3273dc}
+.help.is-success{color:#23d160}
+.help.is-warning{color:#ffdd57}
+.help.is-danger{color:#ff3860}
+
+.input.is-danger,.textarea.is-danger{border-color:#ff3860}

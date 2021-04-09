@@ -1,0 +1,41 @@
+.layout-section{
+    padding: 100px 0;
+    .layout-text-left{
+        padding-top: 100px;
+        @media (max-width:991px){
+            padding-top: 0;
+        }
+        @media (max-width:767px){
+            margin-bottom: 30px;
+        }
+        h1{
+            color: #000000;
+            font-size: 70px;
+            line-height: 70px;
+            font-weight: 800;
+            margin-top: 0;
+            @media (max-width:991px){
+                font-size: 50px;
+                line-height: 60px;
+            }
+        }
+        p{
+            font-size: 18px;
+            line-height: 26px;
+        }
+        .learn{
+            border: 2px solid $blue;
+            margin-top: 30px;
+            &:hover{
+                background: transparent;
+                color: $blue;
+            }
+            
+        }
+    }
+}
+.module-area{
+    background: #fff;
+    text-align: center;
+    padding: 100px 0;
+}

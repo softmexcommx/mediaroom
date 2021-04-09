@@ -1,0 +1,33 @@
+.image-feature{
+    padding: 100px 0px;
+    background: url("../images/promo-2.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 100% 0;
+    background-repeat: no-repeat;
+    @media (max-width:991px){
+        background-position: 30% 0;
+    }
+    .company-content{
+        h2{
+            font-weight: 300;
+            color: #444;
+            margin-bottom: 25px;
+        }
+        p{
+            
+        }
+        .info-list{
+            padding-top: 20px;
+            li{
+                margin-bottom: 4px;
+                i{
+                   display: inline-block;
+                }
+            }
+        }
+        .btn-default{
+            margin-top: 40px;
+        }
+    }
+}

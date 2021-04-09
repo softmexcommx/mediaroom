@@ -1,0 +1,70 @@
+.comingsoon_wrap{
+    height: 100vh;
+    color: #fff;
+    background: $blue;
+}
+
+.sp-comingsoon-title{
+    margin-top: 130px;
+    font-size: 42px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+.sp-comingsoon-content{
+    font-size: 28px;
+    font-weight: 300;
+}
+
+.sp-comingsoon .days,
+.sp-comingsoon .hours,
+.sp-comingsoon .minutes,
+.sp-comingsoon .seconds {
+    display: inline-block;
+    margin: 80px 15px;
+    @media (max-width:767px){
+        margin: 40px 15px;
+        width: 20%;
+    }
+    @media (max-width:600px){
+        width: 15%;
+    }
+    
+}
+.sp-comingsoon .days .number,
+.sp-comingsoon .hours .number,
+.sp-comingsoon .seconds .number,
+.sp-comingsoon .minutes .number {
+  width: 115px;
+  height: 120px;
+  line-height: 120px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  display: inline-block;
+  font-size: 48px;
+  font-weight: bold;
+    @media (max-width:600px){
+        width: 80px;
+        height: 85px;
+        font-size: 30px;
+        line-height: 80px;
+    }
+}
+.sp-comingsoon .days .string,
+.sp-comingsoon .minutes .string,
+.sp-comingsoon .seconds .string,
+.sp-comingsoon .hours .string {
+  display: block;
+  font-size: 18px;
+  margin-top: 10px;
+}
+.sp-comingsoon .social-icons li {
+  display: inline-block;
+  margin: 0 15px;
+}
+.sp-comingsoon .social-icons li a {
+  color: #fff;
+  font-size: 24px;
+}
+.sp-comingsoon .social-icons li a:hover {
+  color: $blue;
+}

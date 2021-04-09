@@ -1,0 +1,87 @@
+.pricing-area{
+    background: #f8f8f8;
+    padding: 100px 0;
+    border-bottom: 1px solid #eee;
+    & + .pricing-area{
+        border-bottom: none;
+    }
+    h2{
+        text-align: center;
+    }
+}
+
+.pricing-body{
+    padding: 0 0 50px 0;
+    border-radius: 4px;
+    background: #fff;
+    text-align: center;
+    border: 1px solid #eee;
+    @media (max-width:767px){
+        margin-top: 30px;
+    }
+    .pricing-header{
+        background: $blue;
+        color: #fff;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        h4{
+            margin: 0;
+            font-weight: 900;
+            letter-spacing: 2px;
+            font-size: 30px;
+            line-height: 100px;
+            text-transform: uppercase;
+        }
+    }
+    .pricing-features{
+        margin-top: 70px;
+        span{
+            font-size: 65px;
+        }
+        .pricing-list{
+            margin: 0;
+            padding: 60px 0px 20px 0px;
+            list-style: none;
+            li{
+                display: block;
+                padding: 5px 0; 
+            }
+        }
+        .btn-default{
+            background: transparent;
+            color: $blue;
+            &:hover{
+                background: $blue;
+                color: #fff;
+            }
+        }
+        .active{
+            background: $blue;
+            color: #fff;
+            box-shadow: none;
+            &:hover{
+                background: transparent;
+                color: $blue;
+                border-color: $blue;
+            }
+        }
+    }
+}
+.middle{
+    border: 1px solid $blue;
+    span{
+        color: $blue;
+    }
+}
+
+
+
+//header-pricing===////
+
+.header-pricing{
+    padding: 100px 0;
+    background-color: #fafafa;
+    h2{
+        font-weight: 600;
+    }
+}

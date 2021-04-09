@@ -1,0 +1,149 @@
+.meet-team-area{
+    position: relative;
+    padding: 100px 0 50px;
+    overflow: hidden;
+    &:after{
+        position: absolute;
+        height: 100%;
+        background: rgba(17,147,212,0.88);
+        background-repeat: repeat;
+        width: 100%;
+        content: "";
+        top: 0;
+        left: 0;
+    }
+    video{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: auto;
+        z-index: -1;
+        bottom: 0px;
+        right: 0px;
+        overflow: hidden;
+        background-size: cover;
+        background-position:50% 50%;
+        background-repeat: no-repeat;
+        @media (max-width:767px){
+            width:  850px
+        }
+    }
+}
+.board-area{
+    h2{
+        font-weight: 300;
+    }
+}
+.dedicated-team{
+    & + .dedicated-team{
+        @media (max-width:767px){
+            margin-top: 30px;
+        }
+    }
+}
+.board-content{
+    border: 1px solid #f1f1f1;
+    border-radius: 3px;
+    padding: 15px;
+    background: #fff;
+    text-align: left;
+    & + .board-content{
+        margin-top: 30px;
+        @media (max-width:991px){
+            margin-bottom: 30px;
+        }
+    }
+    img{
+        max-width: 100%;
+        @media (max-width:767px){
+            width: 100%;
+        }
+        &:hover{
+            background: #fff;
+            opacity: 0.8;
+        }
+    }
+    .board-text{
+        padding: 20px 10px 0px 15px;
+        @media (max-width:1199px){
+            padding: 20px 0px 0px 0px;
+        }
+        @media (max-width:767px){
+            padding: 20px 10px 0px 15px;
+        }
+    }
+    h4{
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: uppercase;
+        line-height: 24px;
+        margin-top: 0;
+        margin-bottom: 18px;
+        small{
+            font-size: 11px;
+            color: #888;
+            font-style: italic;
+        }
+    }
+    .person-social{
+        list-style: none;
+        display: block;
+        padding: 5px 0px 0px;
+        margin: 0;
+        li{
+            display: inline-block;
+            margin: 3px;
+            @media (max-width:991px){
+                margin: 0;
+            }
+            @media (max-width:767px){
+                margin: 3px;
+            }
+            a{
+                font-size: 13px;
+                border-radius: 50%;
+                border: 1px solid #ddd;
+                color: #999;
+                width: 30px;
+                height: 30px;
+                text-align: center;
+                line-height: 30px;
+                display: block;
+                &:hover{
+                    background: $blue;
+                    color: #fff;
+                    border-color: $blue;
+                }
+            }
+        }
+    }
+    &:hover{
+        -moz-box-shadow:    1px 1px 2px 0px #f1f1f1;
+        -webkit-box-shadow: 1px 1px 2px 0px #f1f1f1;
+        box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.1);
+    }
+    
+}
+
+.investor-area{
+    padding: 100px 0;
+    background: #fafafa;
+    @media (max-width:991px){
+        padding-bottom: 70px;
+    }
+    & + .investor-area{
+        border-top: 1px solid #eee;
+    }
+    .dedicated-team{
+        margin-bottom: 30px;
+    }
+}
+
+//.dedicated-area...//
+
+.dedicated-area{
+    padding: 100px 0;
+    background: #fafafa;
+}

@@ -1,0 +1,136 @@
+.sppb-section-promo{
+    padding: 100px 0;
+    .promo-content{
+        text-align: center;
+        span{
+            display: inline-block;
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 20px 22px;
+            color: #ffffff;
+            background-color: $blue;
+            border-width: 1px;
+            border-radius: 50px;
+            font-size: 36px;
+            line-height: 36px;
+        }
+        h3{
+            a{
+                color: #000000;
+                font-size: 18px;
+                line-height: 18px;
+                font-weight: 400;
+                &:hover{
+                    color:$blue;
+                }
+            }
+        } 
+    }
+    .quality-section{
+        span{
+            background: none;
+            font-size: 50px;
+            margin: 0;
+            padding-bottom: 0;
+            line-height: 50px;
+            &.cup{
+                color: #f54f0c; 
+            }
+            .energy{
+                color: #009925;
+            }
+            .earphone{
+                color: $blue;
+            }
+            .support{
+                color: #333;
+            }
+        }  
+    }
+}
+
+
+
+
+
+//video-feature==/
+
+.video-feature{
+    padding: 100px 0px;
+    background: #f9f9f9;
+    border-top: 1px solid #eee;
+    video{
+        max-width: 100%;
+    }
+}
+.title-1{
+    margin-top: 0px;
+    margin-bottom: 25px;
+    color: #000000;
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 700;
+}
+.details{
+    background: transparent;
+    color: $blue;
+    margin-top: 20px;
+    border: 2px solid $blue;
+    &:hover{
+        background: $blue;
+        color: #fff;
+    }
+}
+
+
+
+
+//*idex-agency======*/
+
+.style1{
+    padding-bottom: 0;
+}
+.containerhidden{
+    text-align: center;
+    @media (max-width:767px){
+        margin-top: 30px;
+    }
+    img{
+        display: inline-block;
+    }
+}
+.agency{
+    padding-top: 50px;
+}
+
+.agency-promo{
+    text-align: center;
+    padding: 100px 0px;
+    span{
+        display: inline-block;
+        text-align: center;
+        padding: 30px;
+        border-style: solid;
+        border-color: $blue;
+        border-width: 1px;
+        border-radius: 100px;
+        font-size: 40px;
+        line-height: 40px;
+        i{
+            color: $blue;
+        }
+    }
+    h3{
+        a{
+            color: #000000;
+            font-size: 20px;
+            line-height: 20px;
+            font-weight: 600;
+        }
+    }
+    .agency-content{
+        @media (max-width:767px){
+            margin-top: 20px;
+        }
+    }
+}

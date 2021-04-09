@@ -1,0 +1,17 @@
+.featured_clients{
+    padding: 80px 0;
+    a{
+        display: inline-block;
+        line-height: 95px;
+    }
+    img{
+        max-width: 100%;
+        max-height: 100%;
+        display: inline-block;
+        opacity: 0.7;
+        @include transition;
+    }
+    a:hover img{
+        opacity: 1;
+    }
+}

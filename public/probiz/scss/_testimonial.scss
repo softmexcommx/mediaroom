@@ -1,0 +1,89 @@
+.testimonial_row{
+    padding: 100px 0px;
+    color: #fff;
+    background: url("../images/shutterstock_63211588.jpg") no-repeat fixed left 34px;
+    background-size: cover;
+    position: relative;
+    &:after{
+        display: block;
+        position: absolute;
+        height: 100%;
+        background: rgba(17,147,212,0.9);
+        width: 100%;
+        content: "";
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+    
+    .container{
+        position: relative;
+        z-index: 2;
+    }
+    
+    .testimonial-pro{
+        max-width: 798px;
+        margin: 0 auto;
+        .item{
+            padding: 0;
+            .avatar{
+                width: 100px;
+                height: auto;
+                border: 1px solid #fff;
+                padding: 5px;
+                display: inline-block;
+                margin-bottom: 10px;
+            }
+            .testimonial-message{
+                font-style: italic;
+                font-size: 18px;
+                line-height: 26px;
+                margin-bottom: 10px;
+                @media (max-width:991px){
+                    padding: 0px 50px;
+                }
+
+            }
+            .testimonial-client{
+                margin-bottom: 10px;
+                p{
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    
+    .carousel-control{
+        border: 1px solid #fff;
+        color: #fff;
+        line-height: 30px;
+        width: 35px;
+        height: 35px;
+        border-radius: 3px;
+        position: absolute;
+        top: 50%;
+        background: none;
+        opacity: 1;
+        text-shadow: none;
+        &.left{
+            left: -60px;
+            @media (max-width:991px){
+                left: 5px
+            }
+        }
+        &.right{
+            right: -60px;
+            @media (max-width:991px){
+                right: 5px
+            }
+        }
+        &:hover,&:focus{
+            background: #fff;
+            color:  $blue;
+        }
+    }
+    
+    .carousel-indicators{
+        bottom: -50px;
+    }
+}

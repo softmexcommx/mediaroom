@@ -1,0 +1,89 @@
+.icon-progress-bar{
+    padding: 150px 0px;
+    background-image: url("../images/slider_03.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 100% 16px;
+    background-repeat: no-repeat;
+    position: relative;
+    color: #fff;
+    @media (max-width:991px){
+        padding-bottom: 120px;
+    }
+    &:after{
+        position: absolute;
+        height: 100%;
+        background-color: rgba(17,147,212,0.9);
+        background-repeat: repeat;
+        width: 100%;
+        content: "";
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+    .icon-progressbar{
+        color: #fff;
+        z-index: 1;
+        @media (max-width:991px){
+            margin-bottom: 30px;
+        }
+        @media (max-width:400px){
+            width: 100%;
+        }
+        & + .icon-progressbar{
+            
+        }
+        .media{
+            .media-left{
+                border-right: 2px solid #fff;
+                i{
+                    display: inline-block;
+                    color: #ffffff;
+                    font-size: 50px;
+                    line-height: 50px;  
+                }
+            }
+            .media-body{
+                padding-left: 15px;
+                span{
+                    font-size: 30px;
+                    line-height: 30px;
+                    font-weight: 700;
+                }
+                h4{
+                    margin-bottom: 0;
+                    font-size: 14px;
+                    line-height: 10px;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    @media(max-width:1199px){
+                        line-height: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+/*======corporate2-progress=====*/
+
+.corporate2-progress{
+    background: url("../images/42.jpg") no-repeat scroll 100% 0;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    &:after{
+        position: absolute;
+        height: 100%;
+        background-color: rgba(23,22,33,0.6);
+        background-repeat: repeat;
+        width: 100%;
+        content: "";
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+    
+}

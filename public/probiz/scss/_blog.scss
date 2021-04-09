@@ -1,0 +1,203 @@
+.sp-main-body{
+    background: #fafafa;
+    padding: 100px 0;
+}
+.blog-area{
+    @media (max-width:991px){
+        width: 100%;
+    }
+    .gallery{
+        @media (max-width:991px){
+            width: 298px;
+        }
+        @media (max-width:504px){
+            width: 246px;
+        }
+    }
+}
+.items-leading{
+    .item{
+        background: #fff;
+        box-shadow: 1px 2px 7.28px 0.72px rgba(0,0,0,0.08);
+        margin-bottom: 50px;
+        img{
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+        .blog-content{
+            padding: 40px 40px;
+            @media (max-width:504px){
+                padding: 40px 20px;
+            }
+    }
+}
+.entry-header{
+    margin-left: 68px;
+    margin-bottom: 30px;
+    position: relative;
+    @media (max-width:504px){
+        margin-bottom: 10px;
+        margin-left: 0;
+    }
+    h2{
+        margin: 8px 0 0;
+        a{
+            font-size: 24px;
+            line-height: 1;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: capitalize;
+            color: #000;
+            &:hover{
+                    color: $blue;
+            }
+        }
+    }
+}
+.post-format{
+    position: absolute;
+    top: 0;
+    left: -68px;
+    display: block;
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+    line-height: 48px;
+    text-align: center;
+    border-radius: 3px;
+    color: $blue;
+    border:1px solid $blue;
+    @media (max-width:504px){
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-bottom: 10px;
+    }
+}
+.article-info{
+    margin: 0 -8px 5px;
+    line-height: 12px;
+    dd{
+        display: inline-block;
+        font-size: 12px;
+        color: #666;
+        text-transform: uppercase;
+        margin: 0;
+        padding: 0 8px;
+        border-right: 1px solid #ddd;
+        @media (max-width:504px){
+            display: block;
+            margin-bottom: 10px;
+            border: 0;
+        }
+        i{
+            margin-right: 3px;
+            color: #666;
+        }
+        &:last-child{
+            border: none;
+        }
+
+    }
+}
+    .readmore{
+        margin-top: 30px;
+    }
+}
+.items-more{
+    ol{
+        li{
+            a{
+              &:hover{
+                    color: #23527c;
+                } 
+            }
+        }
+    }
+}
+.module{
+    background: #fff;
+    padding: 40px;
+    border: 1px solid #eee;
+    margin-top: 30px;
+    @media (max-width:504px){
+        padding: 40px 20px;
+    }
+    &:first-child{
+        margin-top: 0;
+    }
+    h3{
+        font-size: 17px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+    .module-content{
+        img{
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+    }
+    .module-title{
+        margin: 0 0 20px;
+    }
+    .categories-module{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li{
+            border-bottom: 1px solid #e8e8e8;
+            padding: 2px 0;
+            a{
+                line-height: 36px;
+                padding: 2px 0;
+                color: #000;
+                &:hover{
+                    color: $blue;
+                }
+            }
+            &:last-child{
+                border-bottom: none;
+            }
+        }
+    }
+    .tagspopular{
+        li{
+            a{
+                &:hover{
+                    background:  $blue;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .flickGallery{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        overflow: hidden;
+      
+    }
+    .latestnews{
+        .latest-info{
+            padding-bottom: 5px;
+            margin-bottom: 5px;
+            border-bottom: 1px solid #e8e8e8;
+            font-style: italic;
+            a{
+                color: #000;
+                font-size: 14px;
+                font-weight: 600;
+                display: block;
+                &:hover{
+                    color:  $blue;
+                }
+            }
+            span{
+                margin-right: 10px;
+            }
+        }
+    }
+}

@@ -1,0 +1,176 @@
+.company-overview{
+    padding: 100px 0;
+    border-bottom: 1px solid #eee;
+    .company-content{
+        @media (max-width:767px){
+            padding-top: 30px;
+        }
+         h2{
+            margin-top: 0px;
+            margin-bottom: 20px;
+            color: #000000;
+            font-size: 30px;
+            line-height: 36px;
+            font-weight: 400;
+        }
+        p{
+            margin-bottom: 30px;
+        }
+        .btn-default{
+            margin-top: 20px;
+        }
+    }
+}
+.info-list{
+    li{
+        margin-bottom: 10px;
+        i{
+            color: $blue;
+            width: 25px;
+            line-height: 27px;
+            float: left;
+        }
+    }
+}
+
+//we-do-section//
+
+.we-do-section{
+    padding: 100px 0;
+    h3{
+        margin-top: 0px;
+        margin-bottom: 25px;
+        color: #000000;
+        font-size: 16px;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+    }
+    .about-tittle{
+        font-weight: 600;
+    }
+    .social-icon{
+        margin-top: 34px;
+    }
+    .we-do{
+        @media (max-width:767px){
+            margin-top: 30px;
+        }
+        .we-do-list{
+            li{
+                padding-bottom: 6px;
+                i{
+                    color: $blue;
+                    font-size: 13px;
+                    line-height: 29px;
+                    width: 30px;
+                    height: auto;
+                    float: left;
+                }
+            }
+        }
+    }
+    .progress-element{
+        @media (max-width:767px){
+            margin-top: 30px;
+        }
+        .progress {
+            border-radius: 0;
+            box-shadow: none;
+            height: 3px;
+            overflow: visible;
+            margin:0;
+        }
+
+        .progress-bar {
+            background: $blue;
+            box-shadow: none;
+        }
+
+        .progress-element {
+            text-align: left;
+        }
+         p{
+            color: #000;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-align: left;
+        } 
+    } 
+}
+
+
+
+.theme-features-area{
+    padding: 100px 0 0;
+    background: #fafafa;
+    h3{
+        color: #000000;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 4px;
+        margin-bottom: 10px;
+    }
+    .media{
+        margin-top: 60px;
+        .media-left{
+            margin-left: 15px;
+            i{
+                display: inline-block;
+                text-align: center;
+                padding: 10px;
+                color: $blue;
+                border: 2px solid $blue;
+                border-radius: 50px;
+                font-size: 20px;
+                line-height: 20px;
+            }
+        }
+        &:hover{
+            i{
+                background: $blue;
+            }
+        }
+    }
+    .features{
+        text-align: right;
+    }
+    .pull-left{
+        margin-left: 0;
+        margin-right: 15px;
+    }
+}
+
+
+//progressbar-area..//
+
+.circle-progressbar-area{
+    padding: 100px 0;
+    background: url("../images/blur-bg.jpg") no-repeat scroll  100% 0;
+    background-size: cover;
+    background-attachment: fixed;
+    color: rgb(255, 255, 255);
+    h2{
+        color: #fff;
+    }
+    .pie-progressbar{
+        text-align: center;
+        .pie-chart{
+            position: relative;
+        }
+        h4{
+            font-size: 20px;
+        } 
+    }
+}
+.chart-percent{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+}
+
+
+

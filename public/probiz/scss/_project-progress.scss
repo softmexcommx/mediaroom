@@ -1,0 +1,45 @@
+.project-progress{
+    padding: 100px 0;
+    .addon-single-image{
+        margin-bottom: 30px;
+    }
+    .addon-text-block{
+        h1{
+            margin-bottom: 40px;
+            color: #333333;
+            font-size: 45px;
+            line-height: 55px;
+            font-weight: 300;
+            @media (max-width:991px){
+                font-size: 35px;
+            }
+        }
+    }
+    .addon-animated-number{
+        & + .addon-animated-number{
+            margin-top: 40px;
+        }
+        span{
+            font-size: 80px;
+            line-height: 80px;
+            font-weight: 700;
+            
+        }
+        .orange{
+            color: #f54f0c;
+        }
+        .blue{
+            color: $blue;
+        }
+        .green{
+            color: #009925;
+        }
+        h2{
+            color: #333333;
+            font-size: 25px;
+            line-height: 25px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+    }
+}

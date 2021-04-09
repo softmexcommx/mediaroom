@@ -1,0 +1,108 @@
+.purchaseBox{
+    border-bottom: 1px solid #eee;
+    .content-holder{
+        padding: 120px 50px 120px 0px;
+        width: 555px;
+        float: right;
+        @media (max-width:1199px){
+            width: 100%;
+            float: left;
+        }
+        @media (max-width:767px){
+            padding: 50px 0;
+            float: none;
+        }
+        .content-title{
+            margin: 20px 0 50px;
+            color: #000000;
+            font-size: 20px;
+            font-weight: 400;
+            letter-spacing: 4px;
+            line-height: 1.3;
+            text-transform: uppercase;
+            position: relative;
+            &:after{
+                background-color: $blue;
+                content: "";
+                height: 2px;
+                left: 0%;
+                transform: translate(0%);
+                position: absolute;
+                bottom: -25px;
+                width: 40px;
+                display: block;
+            }
+        }
+        p{
+            margin-bottom: 40px;
+        }
+    }
+}
+
+.half-purchaseBox{
+    @media (max-width:1199px){
+    }
+    & + .half-purchaseBox{
+        position: absolute;
+        left: 50%;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: url(../images/shutterstock_264940502.jpg) no-repeat scroll 100% center;
+        background-size: cover;
+        @media (max-width:1199px){
+            height: 736px;
+        }
+        @media (max-width:767px){
+            height: 533px;
+            position: inherit;
+            width: 100%;
+            left: 0;
+        }
+        @media (max-width:500px){
+            height: 400px;
+        }
+        @media (max-width:400px){
+            height: 300px;
+        }
+     }
+}
+.half-probiz-best{
+    position: absolute;
+    left: 50%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background: url(../images/about_bg.jpg) no-repeat scroll 100% center;
+    background-size: cover;
+    @media (max-width:1199px){
+        position: relative;
+        width: 100%;
+        height: 799px;
+    }
+    @media (max-width:767px){
+        height: 533px;
+    }
+    @media (max-width:500px){
+        height: 400px;
+    }
+    @media (max-width:400px){
+        height: 300px;
+    }
+}
+.purchaseBox{
+    .purchasebox2{
+        float: right;
+        .content-holder{
+            padding-left: 0px;
+            @media (max-width:1199px){
+                padding-left: 15px;
+                padding-right: 15px
+            }
+        }
+        @media (max-width:1199px){
+            float: none;
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,117 @@
+/*Prefix Styles*/
+.m0{margin: 0;}
+.p0{padding: 0;}
+
+body{
+    font-family: Open Sans, sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 26px;
+    letter-spacing: 0.3px;
+    color: #444;
+    p{
+    }
+    
+    /*Section Fix*/
+    section, header, footer{
+        &.row{            
+            margin: 0;
+            position: relative;
+        }
+    }
+}
+
+/*Ancore*/
+a,.btn,button{
+    outline: none;
+    @include transition;
+    &:before,&:after{
+        @include transition;
+    }
+    &:focus,&:hover{
+        color: #0d72a5;
+        outline: none;
+        text-decoration: none;
+        @include transition;
+    }
+}
+
+.btn{
+    border-radius: 30px;
+    padding: 8px 35px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 13px;
+    margin-top: 10px;
+    box-shadow: none;
+    display: inline-block;
+    margin-bottom: 0;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    white-space: nowrap;
+    line-height: 1.42857143;
+    text-shadow: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    &:hover,&:focus{
+        color: #333;
+        text-decoration: none;
+    }
+    &.btn-default{
+        border: 2px solid $blue;
+        background: $blue;
+        color: #fff;
+        &:hover,&:focus{
+            background-color: transparent;
+            color: $blue;
+        }
+    }
+}
+.btn-default{}
+
+
+
+.btn-primary{
+    background: $blue;
+    border-color: #0f7fb8;
+    &:hover,&:focus{
+        color: #fff;
+        background: #333;
+    }
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.section_title{
+    h2{
+        font-size: 25px;
+        line-height: 1.3;
+        font-weight: 300;
+        color: #000000;
+        margin-bottom: 100px;
+        margin-top: 0;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        position: relative;
+        text-align: center;
+        &:after{            
+            background-color: $blue;
+            display: block;
+            content: "";
+            height: 2px;
+            margin-top: 18px;
+            transform: translate(-50%);
+            position: relative;
+            top: 0px;
+            width: 40px;
+            left: 50%;
+        }
+    }
+}

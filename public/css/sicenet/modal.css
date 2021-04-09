@@ -1,0 +1,43 @@
+#modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8) url("/store/image/ajax-loader.gif") 50% 50% no-repeat;
+}
+
+.modal-header-primary {
+    color: #fff;
+    padding: 9px 15px;
+    border-bottom: 1px solid #eee;
+    background-color: #0C243A;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;  
+}
+
+.my-group .form-control {
+    width: 50%;
+}
+
+.select2-close-mask {
+    z-index: 2099;
+}
+
+.select2-dropdown {
+    z-index: 3051;
+}
+
+.datepicker {
+    z-index: 99999 !important;
+}
+
+.label-disabled{
+    background-color: #cccccc;
+}

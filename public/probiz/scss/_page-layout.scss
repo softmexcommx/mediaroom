@@ -1,0 +1,46 @@
+.page-builder{
+    background: $blue;
+    padding: 100px 0;
+    color: #ffffff;
+    .builder-content{
+        padding-top: 32px;
+        @media (max-width:767px){
+            padding-bottom: 30px;
+        }
+        h2{
+            
+            font-size: 40px;
+            line-height: 40px;
+            font-weight: 400;
+        }
+        .button{
+            background-color: #fff;
+            color: $blue;
+            border: none;
+            margin-top: 37px;
+            &:hover{
+                background-color: rgba(255,255,255,0.8);
+            }
+        }
+    }
+    .builder-video{
+        iframe{
+            width: 100%;
+            height: 312px;
+            border: none;
+        }
+    }
+}
+
+.layout-page-area{
+    text-align: center;
+    padding: 100px 0;
+    .section-title{
+        .title-heading{
+            margin-bottom: 45px;
+        }
+        p{
+            margin-bottom: 50px;
+        }
+    }
+}

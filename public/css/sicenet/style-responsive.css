@@ -1,0 +1,67 @@
+/*
+Template Name: Color Admin - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.7 & Bootstrap 4.0.0-Alpha 6
+Version: 3.0.0
+Author: Sean Ngu
+Website: http://www.seantheme.com/color-admin-v3.0/admin/angularjs/
+*/
+
+/* -------------------------------
+   v1.2 Update
+------------------------------- */
+
+/* Login V2 Setting */
+
+@media (min-width: 1920px) {
+    .login-cover-image img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .login.login-v2 {
+        left: 0;
+        top: 0;
+        margin: 0;
+        position: relative;
+        width: 100%;
+        /*background: none;*/
+        background: #fff;
+    }
+    .login-cover-image img {
+        max-width: initial;
+        max-height: 100%;
+    }
+    .login-bg-list {
+        position: relative;
+        padding: 20px;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+/* Boxed Layout Setting */
+
+@media (max-width: 1080px) {
+    .boxed-layout .page-container,
+    .boxed-layout .page-container .header,
+    .boxed-layout .page-container .top-menu,
+    .boxed-layout .pace {
+        width: 100%;
+    }
+    .boxed-layout .top-menu,
+    .boxed-layout .pace {
+        margin-left: 0;
+        left: 0;
+        right: 0;
+    }
+}
+@media (max-width: 767px) {
+    .boxed-layout .page-container .sidebar,
+    .boxed-layout .page-container .sidebar-bg {
+        left: -220px;
+    }
+    .boxed-layout .page-sidebar-toggled .sidebar,
+    .boxed-layout .page-sidebar-toggled .sidebar-bg {
+        left: 0;
+    }
+}

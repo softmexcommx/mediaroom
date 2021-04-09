@@ -1,0 +1,53 @@
+.outstanding-area{
+    padding-top: 70px;
+    h2{
+        font-weight: 300;
+        color: #444;
+        font-size: 25px;
+        margin-top: 0px;
+        margin-bottom: 20px;
+    }
+    .company-content{
+        padding-top: 10px;
+        @media (max-width:1199px){
+            padding-bottom: 30px;
+        }
+        @media (max-width:767px){
+            padding: 30px 15px;
+        }
+        .feature-info{
+            margin-top: 39px;
+            .media-left{
+                padding-right: 8px;
+            }
+            .media-body{
+                h4{
+                    color: #000000;
+                    font-size: 16px;
+                    line-height: 16px;
+                    font-weight: 400;
+                }
+            }
+        }
+        .btn-default{
+            margin-top: 30px;
+        }
+    }
+}
+
+.features-section{
+    background: #fafafa;
+    .company-content{
+        padding-top: 80px;
+        @media (max-width:991px){
+            padding-top: 0;
+            padding-bottom: 20px;
+        }
+        @media (max-width:767px){
+            padding-top: 40px;
+        }
+    }
+    .features-list{
+        padding-top: 20px;
+    }
+}

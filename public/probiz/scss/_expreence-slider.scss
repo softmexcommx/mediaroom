@@ -1,0 +1,112 @@
+.web-banner{
+    padding: 150px 0px;
+    color: rgb(255, 255, 255);
+    background: url("../images/slider_03.jpg") no-repeat scroll 100% 0;
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center;
+    position: relative;
+    &:after{
+        position: absolute;
+        height: 100%;
+        background-color: rgba(23,22,33,0.6);
+        background-repeat: repeat;
+        width: 100%;
+        content: "";
+        top: 0;
+        left: 0;
+    }
+    .slider-button{
+        .sppb-btn{
+            padding: 12px 40px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        .btn-success{
+            border: none;
+        }   
+    }
+}
+
+.expreence-slider{
+    padding: 150px 0px;
+    color: rgb(255, 255, 255);
+    background: url("../images/background-55.jpg") no-repeat scroll 100% 0;
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center;
+    position: relative;
+    &:after{
+        position: absolute;
+        height: 100%;
+        background-color: rgba(23,22,33,0.6);
+        background-repeat: repeat;
+        width: 100%;
+        content: "";
+        top: 0;
+        left: 0;
+    }
+}
+.slider{
+    z-index: 1;
+    h2{
+        font-size: 80px;
+        line-height: 100px;
+        font-weight: 800;
+        color: #ffffff;
+        margin-bottom: 40px;
+        margin-top: 0;
+        @media (max-width:991px){
+            font-size: 50px;
+            line-height: 55px;
+        }
+        @media (max-width:767px){
+            font-size: 40px;
+            line-height: 50px;
+            margin-bottom: 20px;
+        }
+    }
+    .sppb-btn{
+        margin: 5px;
+    }
+    .slider-button{
+        margin-top: 50px;
+        @media (max-width:767px){
+            margin-top: 20px;
+        }
+    }
+    .btn-success{
+        color: $blue;
+        background:#fff;
+        border-color: #fff;
+        &:hover{
+            background-color: rgba(255,255,255,0.8);
+            border-color:  rgba(255,255,255,0.8);
+            }
+    }
+}
+
+.style-3{
+    padding: 250px 0px 150px;
+}
+.web-banner-slide{
+    color: rgb(255, 255, 255);
+    background: url("../images/desk1.jpg") no-repeat scroll 100% 0;
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center;
+    position: relative;
+    &:after{
+        position: absolute;
+        height: 100%;
+        background-color: rgba(23,22,33,0.6);
+        background-repeat: repeat;
+        width: 100%;
+        content: "";
+        top: 0;
+        left: 0;
+    }
+}
+.inner{
+    font-size: 25px;
+}
