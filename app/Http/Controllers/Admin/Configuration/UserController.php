@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Sicenet\Configuration;
+namespace App\Http\Controllers\Admin\Configuration;
 
 use Alert;
 use Auth;
@@ -143,7 +143,6 @@ class UserController extends Controller
         }
         return response()->json($resp);
     }
-
 
     public function destroy($id)
     {

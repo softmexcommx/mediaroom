@@ -11,7 +11,7 @@
 
             <li>
                 <span class="m-r-sm  welcome-message">
-                    {!! Auth::guard('admin')->user()->centro->cen_desccorta !!}
+                    CAREA
                 </span>
             </li>
 

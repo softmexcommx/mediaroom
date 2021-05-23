@@ -5,10 +5,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ Config('sicenet.name') }} - @yield('title') </title>
+    <title>{{ Config('mediaroom.name') }} - @yield('title') </title>
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ config('app.name', Config('sicenet.name')) }}</title>
+    <title>{{ config('app.name', Config('mediaroom.name')) }}</title>
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
     <!-- Styles -->
 
@@ -50,7 +50,7 @@
     <div id="wrapper">
 
         <!-- Navigation -->
-        @include('sicenet.layouts.navigation')
+        @include('admin.layouts.navigation')
 
         <!-- Page wraper -->
 
@@ -59,7 +59,7 @@
         <div id="page-wrapper" class="gray-bg">
 
             <!-- Page wrapper -->
-            @include('sicenet.layouts.topnavbar')
+            @include('admin.layouts.topnavbar')
 
             <!-- Main view  -->
             @yield('content')
@@ -92,7 +92,7 @@
     <!-- jQuery UI -->
     <script src="{!! asset('/js/plugins/jquery-ui/jquery-ui.min.js') !!}"></script>
 
-    <script src="{!! asset('/js/sicenet/function.sicenet.js') !!}" type="text/javascript"></script>
+    <script src="{!! asset('/js/function.mediaroom.js') !!}" type="text/javascript"></script>
     <script src="{!! asset('/js/plugins/ladda/spin.min.js') !!}" type="text/javascript"></script>
     <script src="{!! asset('/js/plugins/ladda/spin.min.js') !!}" type="text/javascript"></script>
     <script src="{!! asset('/js/plugins/ladda/ladda.min.js') !!}" type="text/javascript"></script>
@@ -119,86 +119,6 @@
     {!! Toastr::render() !!}
 
 
-
-
-
-    <!-- check if pusher is allowed -->
-    @if(config('chatmessenger.use_pusher'))
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pusher/5.0.2/pusher.min.js"></script>
-
-    <script type="text/javascript">
-        $(document).ready(function() {
-   
-   
-                
-                   var pusher = new Pusher('{{ config('pusher.connections.main.auth_key') }}', {
-                       cluster: '{{ config('pusher.connections.main.options.cluster') }}',
-                       encrypted: true
-                   });
-   
-   
-   
-                   var channel = pusher.subscribe('for_user_{{ Auth::guard("instructor")->user()->usu_cve }}');
-   
-                             /* ===================  notificaciones */
-
-                             channel.bind('new-notification', function(data) {
-                                // console.log(data);
-                                var notif = $('#' + data.div_id);                     
-                                if (notif.length) {
-                                    // thread opened
-        
-                                    // append message to thread
-                                    notif.append(data.html);
-        
-                                    // make sure the thread is set to read
-                                   /* $.ajax({
-                                        url: "/notifications/" + notif_id + "/read"
-                                    });*/
-                                } else {
-                                    // thread not currently opened
-        
-                                
-                                     // notify the user
-                           toastr.success(data.notification, data.notif_subject,{
-                            "closeButton": true,
-                            "debug": false,
-                            "newestOnTop": false,
-                            "progressBar": true,
-                            "positionClass": "toast-top-right",
-                            "preventDuplicates": false,
-                            "onclick": null,
-                            "showDuration": "300",
-                            "hideDuration": "1000",
-                            "timeOut": "5000",
-                            "extendedTimeOut": "1000",
-                            "showEasing": "swing",
-                            "hideEasing": "linear",
-                            "showMethod": "fadeIn",
-                            "hideMethod": "fadeOut"
-                           });
-        
-                                    // set unread count
-                                   let url = "{{ route('sicenet.notifications.unread') }}";                          
-                                    $.ajax({
-                                        method: 'GET',
-                                        url: url,
-                                        success: function(data) {                                
-                                            var div = $('#unread_notificacion');
-        
-                                            var count = data.ntf_count;
-                                            if (count == 0) {
-                                                $(div).addClass('hidden');
-                                            } else {
-                                                $(div).text(count).removeClass('hidden');                                     
-                                            }
-                                        }
-                                    });
-                                }
-                            });
-               });
-    </script>
-    @endif
 
 
 

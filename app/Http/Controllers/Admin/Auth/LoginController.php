@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Sicenet\Auth;
+namespace App\Http\Controllers\Admin\Auth;
 
 use App\Http\Controllers\Controller;
 use Auth;
@@ -36,19 +36,18 @@ class LoginController extends Controller
 
     protected function username()
     {
-        return 'usu_email';
+        return 'email';
     }
 
     public function login(Request $request)
     {
-
+       
         $this->validator($request);
-
-        if (Auth::guard('admin')->attempt($request->only('email', 'password'), false)) {
-
+      
+        if (Auth::guard('admin')->attempt($request->only('email', 'password'), false)) {              
             return redirect()->route('main.admin');
         }
-
+      
         //Authentication failed...
         return $this->loginFailed();
     }
@@ -57,7 +56,7 @@ class LoginController extends Controller
     {
         //validation rules.
         $rules = [
-            'email' => 'required|email|exists:e_usuario|min:5|max:191',
+            'email' => 'required|email|exists:users_admins|min:5|max:191',
             'password' => 'required|string|min:4|max:255',
         ];
 

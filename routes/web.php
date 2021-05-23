@@ -30,9 +30,7 @@ Route::group(['middleware' => 'cors', 'prefix' => 'mediaroom'], function () {
 
         Route::get('password', 'MediaRoom\Configuration\UserController@password')->name("mediaroom.password");
         Route::put('password', 'MediaRoom\Configuration\UserController@passwordupdate');
-
-        Route::get('users/perfil/imagen', 'MediaRoom\Configuration\UserController@miimagen')->name("mediaroom.users.imagen");
-        Route::post('upload', 'MediaRoom\Configuration\UserController@upload');
+      
     });
 
 });

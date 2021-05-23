@@ -19,7 +19,7 @@ class MainController extends Controller
     public function admin()
     {
 
-        if (Auth::guard('admin')->check() == true && Auth::guard('admin')->user()->usu_activo == true) {
+        if (Auth::guard('admin')->check() == true && Auth::guard('admin')->user()->status == true) {
             \App::setLocale('es');
             session(['locale' => 'es']);
             Session::forget('sessionModel');
@@ -27,7 +27,7 @@ class MainController extends Controller
             $sm->id = Auth::guard('admin')->user()->id;
             Session::put('sessionModel', $sm);
             Toastr::clear();
-            Toastr::success(Auth::guard('admin')->user()->nameComplete, trans('textos.home.welcome'));
+            Toastr::success(Auth::guard('admin')->user()->name, trans('textos.home.welcome'));
             return redirect()->route('admin.load');
         }
     }
@@ -42,7 +42,7 @@ class MainController extends Controller
             $sm->id = Auth::guard('web')->user()->id;
             Session::put('sessionModel', $sm);
             Toastr::clear();
-            Toastr::success(Auth::guard('web')->user()->nameComplete, trans('textos.home.welcome'));
+            Toastr::success(Auth::guard('web')->user()->name, trans('textos.home.welcome'));
             return redirect()->route('mediaroom.load');
         }
     }

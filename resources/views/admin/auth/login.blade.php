@@ -19,8 +19,8 @@
     <link href="{!! asset('css/animate.css') !!}" rel="stylesheet">
     <link id="loadBefore" href="{!! asset('css/style.css') !!}" rel="stylesheet" />
 
-    <link href="{!! asset('css/sicenet/estilos_extra.css') !!}" rel="stylesheet" />
-    <link href="{!! asset('css/sicenet/style-responsive.css') !!}" rel="stylesheet" />
+    <link href="{!! asset('css/coralbeach/estilos_extra.css') !!}" rel="stylesheet" />
+    <link href="{!! asset('css/coralbeach/style-responsive.css') !!}" rel="stylesheet" />
 
 </head>
 
@@ -39,20 +39,20 @@
                 <div class="login-content">
 
                     <div class="form-group m-b-20 text-center">
-                        <img src="{{ asset('store/image/logos/logooficial.png') }}">
+                        <img src="{{ asset('store/image/logos/logo.png') }}" width="90%">
                     </div>
                     <form rol="form" class="margin-bottom-0" name="loginForm" method="POST"
-                        action="{{ route('sicenet.login') }}">
+                        action="{{ route('admin.login') }}">
                         {{ csrf_field() }}
 
-                        <div class="form-group{{ $errors->has('usu_email') ? ' has-error' : '' }}">
+                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                             <div class="col-md-12">
-                                <input id="email" type="email" class="form-control" placeholder="Email" name="usu_email"
-                                    value="{{ old('usu_email') }}" required autofocus>
+                                <input id="email" type="email" class="form-control" placeholder="Email" name="email"
+                                    value="{{ old('email') }}" required autofocus>
 
-                                @if ($errors->has('usu_email'))
+                                @if ($errors->has('email'))
                                 <span class="help-block" style="color:red;">
-                                    <strong>{{ $errors->first('usu_email') }}</strong>
+                                    <strong>{{ $errors->first('email') }}</strong>
                                 </span>
                                 @endif
                             </div>
@@ -84,7 +84,7 @@
                         <br />
                         <a href="#"><small>¿Se te olvidó tu contraseña?</small></a>
                         <div class="login-buttons">
-                            <button type="submit" class="btn btn-success btn-block btn-lg">INGRESAR</button>
+                            <button type="submit" class="btn btn-coral btn-block btn-lg">INGRESAR</button>
                         </div>
                     </form>
 

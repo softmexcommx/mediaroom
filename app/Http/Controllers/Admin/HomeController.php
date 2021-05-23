@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Sicenet;
+namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use JavaScript;
@@ -10,7 +10,7 @@ class HomeController extends Controller
     public function __construct()
     {
 
-        $this->middleware(['auth:instructor']);
+        $this->middleware(['auth:admin']);
     }
 
     public function index()
@@ -20,6 +20,6 @@ class HomeController extends Controller
             'path' => env('APP_URL'),
         ]);
 
-        return view('sicenet.home.index');
+        return view('admin.home.index');
     }
 }

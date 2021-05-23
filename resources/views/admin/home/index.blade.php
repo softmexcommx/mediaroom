@@ -1,14 +1,9 @@
 @extends('admin.layouts.app')
 @section('title', 'Inicio')
 @section('css')
-<link href="{!! asset('/css/admin/modal.css') !!}" rel='stylesheet' />
-<link href="{!! asset('/css/admin/admin-style.css') !!}" rel='stylesheet' />
+<link href="{!! asset('/css/coralbeach/modal.css') !!}" rel='stylesheet' />
+<link href="{!! asset('/css/coralbeach/coralbeach-style.css') !!}" rel='stylesheet' />
 
-
-<link href="{!! asset('/css/plugins/fullcalendar-scheduler-1.9.0/lib/fullcalendar.min.css') !!}" rel='stylesheet' />
-<link href="{!! asset('/css/plugins/fullcalendar-scheduler-1.9.0/lib/fullcalendar.print.min.css') !!}" rel='stylesheet'
-        media='print' />
-<link href="{!! asset('/css/plugins/fullcalendar-scheduler-1.9.0/scheduler.min.css') !!}" rel='stylesheet' />
 
 @stop
 
@@ -42,7 +37,7 @@
                                                         <strong>CENTRO DE CAPACITACIÓN:</strong>
                                                         <br>
                                                         <h2><span
-                                                                        class=" text-success text-uppercase font-bold">{{ Auth::guard('instructor')->user()->centro->cen_desccorta }}</span>
+                                                                        class=" text-success text-uppercase font-bold">carea</span>
                                                         </h2>
                                                 </div>
                                                 <div class="col-md-6">
@@ -70,7 +65,7 @@
                                         </div>
                                 </div>
                                 <div class="ibox-content">
-                                        <div id="calendar"></div>
+                                        
 
                                 </div>
                         </div>
@@ -80,18 +75,11 @@
 
 </div>
 <div id="modal"></div>
-@include('admin.cursos.modal')
+
 @endsection
 
 @section('scripts')
 <script src="{!! asset('/js/admin/home/index.js') !!}" type="text/javascript"></script>
-
-
 <script src="{!! asset('/js/plugins/fullcalendar-scheduler-1.9.0/lib/moment.min.js') !!}"></script>
 <script src="{!! asset('/js/plugins/fullcalendar-scheduler-1.9.0/lib/jquery-ui.min.js') !!}"></script>
-<script src="{!! asset('/js/plugins/fullcalendar-scheduler-1.9.0/lib/fullcalendar.min.js') !!}"></script>
-<script src="{!! asset('/js/plugins/fullcalendar-scheduler-1.9.0/scheduler.min.js') !!}"></script>
-
-
-<script src="{!! asset('/js/plugins/fullcalendar-3.7.0/locale/es.js') !!}"></script>
 @stop
