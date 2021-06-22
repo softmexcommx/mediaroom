@@ -28,14 +28,17 @@
                             <span>login form</span>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <form action="#" method="post" id="login-form">
+                                    
+                                        <form rol="form" name="login-form" id="login-form" method="POST"
+                                        action="{{ route('login') }}">
+                                        {{ csrf_field() }}
                                         <div id="form-login-username" class="form-group">
                                             <div class="input-group">
                                                 <span class="input-group-addon">
                                                     <i class="icon-user hasTooltip" title=""
                                                         data-original-title="Username"></i>
                                                 </span>
-                                                <input type="text" class="form-control" placeholder="Email">
+                                                <input type="text" name="email" class="form-control" placeholder="Email" value="{{ old('email') }}" required autofocus>
                                             </div>
                                         </div>
                                         <div id="form-login-password" class="form-group">
@@ -45,10 +48,24 @@
                                                         <i class="icon-lock hasTooltip" title=""
                                                             data-original-title="Password"></i>
                                                     </span>
-                                                    <input type="password" class="form-control" placeholder="Password">
+                                                    <input type="password" name="password" class="form-control" placeholder="Password">
+                                                    @if ($errors->has('password'))
+                                                    <span class="help-block">
+                                                        <strong class="text-danger">{{ $errors->first('password') }}</strong>
+                                                    </span>
+                                                    @endif
                                                 </div>
                                             </div>
                                         </div>
+
+                                        @if(session('error'))
+                                        <div class="alert alert-danger alert-dismissible fade show text-justify" role="alert">
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                            {!! session('error') !!}
+                                        </div>
+                                        @endif
 
                                         <div id="form-login-remember" class="form-group">
                                             <div class="checkbox">

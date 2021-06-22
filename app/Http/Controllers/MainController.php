@@ -35,6 +35,7 @@ class MainController extends Controller
     public function mediaroom()
     {
         if (Auth::guard('web')->check() == true) {
+           
             \App::setLocale('es');
             session(['locale' => 'es']);
             Session::forget('sessionModel');
@@ -54,6 +55,7 @@ class MainController extends Controller
 
             return redirect()->route('mediaroom.home');
         } else {
+          
             Session::flash('error', 'Tu cuenta no ha sido confirmada. <br>Al generar tu registro enviamos un email solicitando la confirmación de tu cuenta, si no lo recibiste haz click aqui');
             return redirect()->route('login');
 

@@ -23,11 +23,11 @@ Route::group(['middleware' => 'cors', 'prefix' => 'mediaroom'], function () {
 
     Route::get('/', 'MainController@loadmediaroom')->name("mediaroom.load");
     Route::get('home', ['as' => 'mediaroom.home', 'uses' => 'MediaRoom\HomeController@index']);
+    Route::get('images', ['as' => 'mediaroom.images', 'uses' => 'MediaRoom\HomeController@images']);
 
     Route::group(['prefix' => 'configuration'], function () {
         Route::get('user/perfil', 'MediaRoom\Configuration\UserController@miperfil')->name("mediaroom.miperfil");
         Route::put('user/{id}/perfil', 'MediaRoom\Configuration\UserController@updateperfil')->name("mediaroom.updateperfil");
-
         Route::get('password', 'MediaRoom\Configuration\UserController@password')->name("mediaroom.password");
         Route::put('password', 'MediaRoom\Configuration\UserController@passwordupdate');
       
@@ -42,6 +42,29 @@ Route::group(['middleware' => 'cors', 'prefix' => 'admin'], function () {
     Route::post('logout', 'Admin\Auth\LoginController@logout')->name("admin.logout");
     Route::get('/', 'MainController@loadadmin')->name("admin.load");
     Route::get('home', ['as' => 'admin.home', 'uses' => 'Admin\HomeController@index']);
+
+
+    Route::group(['prefix' => 'catalogs'], function () {
+
+        Route::group(['prefix' => 'categories'], function () {  
+            Route::get('index', 'Admin\Configuration\CategoryController@index');          
+            Route::post('store', 'Admin\Configuration\CategoryController@store');
+            Route::put('update/{id}', 'Admin\Configuration\CategoryController@update');
+            Route::delete('destroy/{id}', 'Admin\Configuration\CategoryController@destroy');            
+        });
+
+        Route::group(['prefix' => 'areas'], function () {   
+            Route::get('{idCategory}/index ', 'Admin\Configuration\AreaController@index');                      
+            Route::post('store', 'Admin\Configuration\AreaController@store');
+            Route::put('update/{id}', 'Admin\Configuration\AreaController@update');
+            Route::delete('destroy/{id}', 'Admin\Configuration\AreaController@destroy');            
+            Route::group(['prefix' => 'areas'], function () {   
+                Route::get('{idArea}/files ', 'Admin\Configuration\AreaController@files');          
+            });
+        });
+
+    });
+
 
 });
 

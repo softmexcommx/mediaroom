@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\SicenetEnLinea;
+namespace App\Http\Controllers\MediaRoom;
 
 use App\Http\Controllers\Controller;
 use Auth;
@@ -18,19 +18,23 @@ class HomeController extends Controller
 
     public function index()
     {
-        $threads = Thread::forUser(Auth::guard('web')->user()->usudis_cve)->latest('updated_at')->take(5);
-
-        $cursosActivos = Auth::guard('web')->user()->data->cursosActivosVirtuales;
-        $cursosDisponibles = Auth::guard('web')->user()->data->cursosDisponibles;
-
+      
         JavaScript::put([
             'path' => env('APP_URL'),
-            'tra_cve' => Auth::guard('web')->user()->usudis_cve,
+            'id' => Auth::guard('web')->user()->id,
         ]);
 
-        return view('sicenet_enlinea.index')
-            ->with('cursosActivos', $cursosActivos)
-            ->with('cursosDisponibles', $cursosDisponibles)
-            ->with('threads', $threads);
+        return view('mediaroom.home.index');
+    }
+
+    public function images()
+    {
+      
+        JavaScript::put([
+            'path' => env('APP_URL'),
+            'id' => Auth::guard('web')->user()->id,
+        ]);
+
+        return view('mediaroom.home.images');
     }
 }

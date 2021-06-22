@@ -38,6 +38,11 @@
                 <a href="{{ route('admin.home') }}"><i class="fa fa-home"></i> <span class="nav-label">INICIO</span></a>
             </li>
 
+            <li>
+                <a href="#"><i class="fa fa-users"></i> Usuarios<span
+                    class="nav-label"></span></a>
+              </li>
+
 
         </ul>
 

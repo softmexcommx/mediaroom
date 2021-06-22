@@ -11,7 +11,7 @@
 
             <li>
                 <span class="m-r-sm  welcome-message">
-                    CAREA
+                    MEDIA ROOM
                 </span>
             </li>
 

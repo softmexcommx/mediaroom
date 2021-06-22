@@ -173,7 +173,7 @@ trait AuthenticatesUsers
 
         return $request->wantsJson()
         ? new JsonResponse([], 204)
-        : redirect('/sicenet_enlinea/login');
+        : redirect('/');
     }
 
     /**

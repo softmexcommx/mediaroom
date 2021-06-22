@@ -66,7 +66,7 @@
 
 
             <!-- Footer -->
-            @include('layouts.footer')
+            @include('admin.layouts.footer')
 
         </div>
         <!-- End page wrapper-->
