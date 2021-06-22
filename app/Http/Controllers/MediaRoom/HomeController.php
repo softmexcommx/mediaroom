@@ -27,14 +27,4 @@ class HomeController extends Controller
         return view('mediaroom.home.index');
     }
 
-    public function images()
-    {
-      
-        JavaScript::put([
-            'path' => env('APP_URL'),
-            'id' => Auth::guard('web')->user()->id,
-        ]);
-
-        return view('mediaroom.home.images');
-    }
 }

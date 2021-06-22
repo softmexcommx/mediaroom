@@ -186,6 +186,6 @@
 <!-- FooTable -->
 <script src="{!! asset('/js/plugins/footable/footable.all.min.js') !!}"></script>
 
-<script src="{!! asset('/vue/mediaroom/panel.vue') !!}" type="text/javascript"></script>
+<script src="{!! asset('/vue/admin/panel.vue') !!}" type="text/javascript"></script>
 
 @stop

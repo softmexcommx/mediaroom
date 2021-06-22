@@ -129,6 +129,12 @@
     -webkit-animation-iteration-count: infinite;
 }
 
+.circle{
+ height: 150px;
+ width: 150px;
+ border-radius: 50% !important;
+}
+
 @-moz-keyframes parpadeo {
     0% {
         opacity: 1;

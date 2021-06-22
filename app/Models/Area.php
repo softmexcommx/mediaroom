@@ -14,6 +14,7 @@ class Area extends Model
      *
      * @var string
      */
+    protected $appends = array('thumbnail');
 
     protected $primaryKey = 'idArea';
 
@@ -41,28 +42,28 @@ class Area extends Model
         return $this->belongsTo('App\Models\Category', 'category_idCategory', 'idCategory');
     }
 
-    public static function thumbnail($slug)
+    public static function getthumbnailAttribute()
     {
         $_photo = '';
-        $items = \Storage::disk('photos')->files($slug.'/images');
+        $items = \Storage::disk('photos')->files($this->slug.'/images');
      
         foreach ($items as $item) {
             if (basename($item) == 'thumbnail.jpg' || basename($item) == 'thumbnail.jpeg') {
-                $_photo  = env('APP_PHOTO') . '/' . $item;
+                $_photo  = env('APP_PHOTO') . '/' . $slug . '/images/' . $item;
                 break;
             }
         }
         return $_photo;
     }
 
-    public static function photosHigh($slug)
+    public static function photosHigh()
     {
         $_photos = array();
-        $items = \Storage::disk('photos')->files($slug .'/images/high');
+        $items = \Storage::disk('photos')->files($this->slug .'/images/high');
      
         foreach ($items as $item) {
             //if (basename($item) != 'thumbnail.jpg' || basename($item) != 'thumbnail.jpeg') {
-                $_photos[] = env('APP_PHOTO') . '/' . $item;
+                $_photos[] = env('APP_PHOTO') . '/' . $this->slug . '/images/high/'. $item;
             //}
         }
         return $_photos;

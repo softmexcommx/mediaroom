@@ -15,7 +15,7 @@
         rel='stylesheet' type='text/css'>
 
     <!--Bootstrap-->
-    <link rel="stylesheet" href="{!! asset('/probiz/css/bootstrap.min.css') !!}">
+    <link rel="stylesheet" href="{!! asset('/css/bootstrap.min.css') !!}">
     <link rel="stylesheet" href="{!! asset('/probiz/css/bootstrap-theme.min.css') !!}">
     <!--rs-css-->
     <link href="{!! asset('/probiz/vendors/rs-plugin/css/settings.css') !!}" rel="stylesheet">
@@ -31,6 +31,8 @@
     <link rel="stylesheet" href="{!! asset('/probiz/css/font-awesome.min.css') !!}">
     <!--P7-->
     <link rel="stylesheet" href="{!! asset('/probiz/css/pe-icon-7-stroke.min.css') !!}">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
 
     <!--Theme Styles-->
     <link rel="stylesheet" href="{!! asset('/probiz/css/style.css') !!}">

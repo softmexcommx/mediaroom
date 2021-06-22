@@ -1,5 +1,9 @@
 @extends('mediaroom.layouts.app')
 
+@section('css')
+<link href="{!! asset('/css/coralbeach/coralbeach-style.css') !!}" rel='stylesheet' />
+@stop
+
 @section('content')
 <!--page-cover   -->
 <section class="sp-page-title row">
@@ -17,28 +21,35 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-8 blog-area">
-                <div class="row">
-                                        
-                        <div class="col-md-4 col-sm-6">
-                            <div class="board-content">
-                                <img class="img-responsive" src="http://placehold.it/320x245" alt="">
-                                <div class="board-text">
-                                    <h4>Jane Doe </h4>                                                                      
-                                </div>
-                            </div>                                                   
-                        </div>
-                     
-                        @foreach(array_chunk($address, 2) as $chunk)
-                        <div class="row">
-                            @foreach($chunk as $add)
-                                <div class="col-md-6">
-                                    Some data
-                                </div>
-                            @endforeach
-                        </div>
-                    @endforeach
-                    
-                </div>
+               
+
+    <!--Grid row-->
+    <div class="row text-center">
+        <!--Grid column-->
+        <div class="col-md-4">
+          <h4 >With shadow</h4>
+          <img class="circle z-depth-2"  src="https://mdbootstrap.com/img/Photos/Avatars/img%20(31).jpg"
+            data-holder-rendered="true">
+        </div>
+        <!--Grid column-->
+         <!--Grid column-->
+         <div class="col-md-4">
+            <h4>With shadow</h4>
+            <img class="circle z-depth-2"  src="https://mdbootstrap.com/img/Photos/Avatars/img%20(31).jpg"
+              data-holder-rendered="true">
+          </div>
+          <!--Grid column-->
+           <!--Grid column-->
+         <div class="col-md-4">
+            <h4>With shadow</h4>
+            <img class="circle z-depth-2"  src="https://mdbootstrap.com/img/Photos/Avatars/img%20(31).jpg"
+              data-holder-rendered="true">
+          </div>
+          <!--Grid column-->
+         
+      </div>
+      <!--Grid row-->
+
             </div>
             <div class="col-sm-4 blog-area">
                 <div class="column">

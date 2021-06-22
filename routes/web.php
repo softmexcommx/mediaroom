@@ -23,7 +23,14 @@ Route::group(['middleware' => 'cors', 'prefix' => 'mediaroom'], function () {
 
     Route::get('/', 'MainController@loadmediaroom')->name("mediaroom.load");
     Route::get('home', ['as' => 'mediaroom.home', 'uses' => 'MediaRoom\HomeController@index']);
-    Route::get('images', ['as' => 'mediaroom.images', 'uses' => 'MediaRoom\HomeController@images']);
+
+    Route::group(['middleware' => 'cors', 'prefix' => 'images'], function () {
+        Route::get('/', ['as' => 'mediaroom.images.index', 'uses' => 'MediaRoom\ImageController@index']);
+            
+            Route::group(['middleware' => 'cors', 'prefix' => 'select'], function () {
+                Route::get('areas', ['as' => 'mediaroom.images.areas', 'uses' => 'MediaRoom\ImageController@getAreas']);
+            });
+    });
 
     Route::group(['prefix' => 'configuration'], function () {
         Route::get('user/perfil', 'MediaRoom\Configuration\UserController@miperfil')->name("mediaroom.miperfil");

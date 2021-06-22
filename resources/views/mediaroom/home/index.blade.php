@@ -47,7 +47,7 @@
     <div class="row">
         <div class="col-sm-4 work-01">
             <div class="work-process">
-                <h2 class="work-title"><a href="{{ route('mediaroom.images') }}" class="text-white"><i class="fa fa-picture-o text-white"></i></a></h2>
+                <h2 class="work-title"><a href="{{ route('mediaroom.images.index') }}" class="text-white"><i class="fa fa-picture-o text-white"></i></a></h2>
                 <h3>Pictures</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer adipiscing erat eget risus
                     sollicitudin pellentesque.</p>
