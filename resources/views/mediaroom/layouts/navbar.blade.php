@@ -30,9 +30,7 @@
     <a href="#" class="close-offcanvas"><i class="fa fa-remove"></i></a>
     <h3 class="sp-module-title">MEDIA ROOM</h3>
     <ul class="nav menu" id="offcanvas-inner-menu">
-        <li><a href="{{ route('home') }}">Home</a></li>
-
-       
+        <li><a href="{{ route('mediaroom.home') }}">Home</a></li>
         <li><a href="#">Contact</a></li>
 
     </ul>

@@ -22,7 +22,7 @@ class AreaController extends Controller
   
     public function index($id){
         $areas = DB::table('cat_areas')
-        ->select('cat_areas.idArea', 'cat_areas.nameArea', 'cat_areas.edo', 'cat_areas.category_idCategory')        
+        ->select('cat_areas.idArea', 'cat_areas.nameArea', 'cat_areas.slug', 'cat_areas.edo', 'cat_areas.category_idCategory')        
         ->where('category_idCategory', $id)
         ->where('edo', true)
         ->get();

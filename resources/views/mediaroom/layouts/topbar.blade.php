@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-3">
-                <a href="{{ route('home') }}" class="logo"><img src="{!! asset('store/image/logos/logo.png') !!}"
+                <a href="{{ route('mediaroom.home') }}" class="logo"><img src="{!! asset('store/image/logos/logo.png') !!}"
                         alt=""></a>
             </div>
             <div class="col-sm-9 hidden-xs contact-inner">

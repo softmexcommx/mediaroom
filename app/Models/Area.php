@@ -25,7 +25,7 @@ class Area extends Model
      */
 
     protected $fillable = [
-        'idArea', 'nameArea', 'status', 'category_idCategory'
+        'idArea',  'nameArea', 'slug', 'status', 'category_idCategory'
     ];
 
     /**
@@ -42,21 +42,15 @@ class Area extends Model
         return $this->belongsTo('App\Models\Category', 'category_idCategory', 'idCategory');
     }
 
-    public static function getthumbnailAttribute()
+    public  function getthumbnailAttribute()
     {
-        $_photo = '';
-        $items = \Storage::disk('photos')->files($this->slug.'/images');
      
-        foreach ($items as $item) {
-            if (basename($item) == 'thumbnail.jpg' || basename($item) == 'thumbnail.jpeg') {
-                $_photo  = env('APP_PHOTO') . '/' . $slug . '/images/' . $item;
-                break;
-            }
-        }
-        return $_photo;
+        $_photo = \Storage::disk('photos')->exists($this->slug .'/images/thumbnail.jpg');
+        
+       return $_photo == true ? env('APP_PHOTO') . $this->slug .'/images/thumbnail.jpg' : env('APP_PHOTO') . '/logo.png' ;
     }
 
-    public static function photosHigh()
+    public  function photosHigh()
     {
         $_photos = array();
         $items = \Storage::disk('photos')->files($this->slug .'/images/high');

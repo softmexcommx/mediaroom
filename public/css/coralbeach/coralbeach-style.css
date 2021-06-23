@@ -129,9 +129,9 @@
     -webkit-animation-iteration-count: infinite;
 }
 
-.circle{
- height: 150px;
- width: 150px;
+.circle-img{
+ height: 100px;
+ width: 100px;
  border-radius: 50% !important;
 }
 

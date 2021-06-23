@@ -15,7 +15,7 @@
         rel='stylesheet' type='text/css'>
 
     <!--Bootstrap-->
-    <link rel="stylesheet" href="{!! asset('/css/bootstrap.min.css') !!}">
+    <link rel="stylesheet" href="{!! asset('/probiz/css/bootstrap.min.css') !!}">
     <link rel="stylesheet" href="{!! asset('/probiz/css/bootstrap-theme.min.css') !!}">
     <!--rs-css-->
     <link href="{!! asset('/probiz/vendors/rs-plugin/css/settings.css') !!}" rel="stylesheet">
@@ -32,8 +32,6 @@
     <!--P7-->
     <link rel="stylesheet" href="{!! asset('/probiz/css/pe-icon-7-stroke.min.css') !!}">
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
-
     <!--Theme Styles-->
     <link rel="stylesheet" href="{!! asset('/probiz/css/style.css') !!}">
 
@@ -49,12 +47,12 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
+
 <body>
 
     @include('mediaroom.layouts.topbar')
     <!--Navbar-->
     @include('mediaroom.layouts.navbar')
-
 
     @yield('content')
 
@@ -63,7 +61,9 @@
     <!-- Mainly scripts -->
     <script src="{!! asset('/probiz/js/jquery-2.1.4.min.js') !!}"></script>
     <script src="{!! asset('/probiz/js/bootstrap.min.js') !!}"></script>
-    <script src="{!! asset('/probiz/vendors/jflickr/jflickrfeed.min.js') !!}"></script>
+    <script src="{!! asset('/js/plugins/vuejs/vue.js') !!}"></script>
+    <script src="{!! asset('/js/plugins/vuejs/axios.js') !!}"></script>
+    
     <script src="{!! asset('/probiz/vendors/magnific-popup/jquery.magnific-popup.min.js') !!}"></script>
     <script src="{!! asset('/probiz/vendors/waypoint/waypoints.min.js') !!}"></script>
     <script src="{!! asset('/probiz/vendors/couterup/jquery.counterup.min.js') !!}"></script>

@@ -1,9 +1,8 @@
 @extends('mediaroom.layouts.app')
-
 @section('css')
 <link href="{!! asset('/css/coralbeach/coralbeach-style.css') !!}" rel='stylesheet' />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
 @stop
-
 @section('content')
 <!--page-cover   -->
 <section class="sp-page-title row">
@@ -16,39 +15,25 @@
         </ol>
     </div>
 </section>
-
-<section class="sp-main-body">
+<section class="sp-main-body" id="app-images">
     <div class="container">
         <div class="row">
             <div class="col-sm-8 blog-area">
                
 
-    <!--Grid row-->
-    <div class="row text-center">
-        <!--Grid column-->
-        <div class="col-md-4">
-          <h4 >With shadow</h4>
-          <img class="circle z-depth-2"  src="https://mdbootstrap.com/img/Photos/Avatars/img%20(31).jpg"
-            data-holder-rendered="true">
-        </div>
-        <!--Grid column-->
-         <!--Grid column-->
-         <div class="col-md-4">
-            <h4>With shadow</h4>
-            <img class="circle z-depth-2"  src="https://mdbootstrap.com/img/Photos/Avatars/img%20(31).jpg"
-              data-holder-rendered="true">
-          </div>
-          <!--Grid column-->
-           <!--Grid column-->
-         <div class="col-md-4">
-            <h4>With shadow</h4>
-            <img class="circle z-depth-2"  src="https://mdbootstrap.com/img/Photos/Avatars/img%20(31).jpg"
-              data-holder-rendered="true">
-          </div>
-          <!--Grid column-->
-         
-      </div>
-      <!--Grid row-->
+                <!--Grid row-->
+                <div class="row text-center">
+                    <!--Grid column-->
+                    <div class="col-md-3" v-for="area in areas">
+                    <h6 >@{{ area.nameArea }}</h6>
+                    <img class="circle-img z-depth-2"  :src="area.thumbnail"
+                        data-holder-rendered="true">
+                    </div>
+                    <!--Grid column-->
+                    
+                
+                </div>
+                <!--Grid row-->
 
             </div>
             <div class="col-sm-4 blog-area">
@@ -85,5 +70,7 @@
         </div>
     </div>
 </section>
-
 @endsection
+@section('scripts')
+<script src="{!! asset('/vue/mediaroom/images.vue') !!}" type="text/javascript"></script>
+@stop

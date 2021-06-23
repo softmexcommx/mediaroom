@@ -5,7 +5,8 @@ namespace App\Http\Controllers\MediaRoom;
 use App\Http\Controllers\Controller;
 use Auth;
 use JavaScript;
-
+use App\Models\Area;
+use Illuminate\Http\Request;
 class ImageController extends Controller
 {
     public function __construct()
@@ -31,6 +32,7 @@ class ImageController extends Controller
         $areas = $query->get();
 
         foreach($areas as $item){
+          
             $data[] = array(
                 'idArea' => $item->idArea,
                 'nameArea' => $item->nameArea,

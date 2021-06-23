@@ -32,7 +32,7 @@
 <br>
 <div id="appPanel">
     <div class="row">
-        <div class="col-lg-3">
+        <div class="col-lg-6">
             <div class="ibox">
                 <div class="ibox-content">
                    
@@ -94,7 +94,7 @@
 
 
         </div>
-        <div class="col-lg-3">
+        <div class="col-lg-6">
             <div class="ibox">
                 <div class="ibox-content">
                    
@@ -134,6 +134,7 @@
                                         </div>
                                     </td>
                                     <td>@{{ item.nameArea }}</td>
+                                    <td>@{{ item.slug }}</td>
                                     <td><a href="#" v-on:click.prevent="getFiles(item.idArea)"
                                         class="btn btn-default btn-sm"><i class="fa fa-arrow-right"></i></a></td>
                                 </tr>
@@ -155,13 +156,7 @@
 
 
         </div>
-        <div class="col-lg-6">
-                <div class="ibox">
-                        <div class="ibox-content">
-
-                        </div>
-                </div>
-        </div>
+        
 
     </div>
     @include('admin.catalogs.categories.create')

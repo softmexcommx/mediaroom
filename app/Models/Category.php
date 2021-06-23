@@ -24,7 +24,7 @@ class Category extends Model
      */
 
     protected $fillable = [
-        'idCategory', 'nameCategory', 'description', 'edo',
+        'idCategory', 'nameCategory', 'slug', 'edo',
     ];
 
     /**
