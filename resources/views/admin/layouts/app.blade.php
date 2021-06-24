@@ -68,6 +68,8 @@
             <!-- Footer -->
             @include('admin.layouts.footer')
 
+            @include('layouts.js')
+
         </div>
         <!-- End page wrapper-->
     </div>

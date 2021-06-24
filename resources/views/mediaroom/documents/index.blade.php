@@ -1,33 +1,33 @@
 @extends('mediaroom.layouts.app')
 @section('css')
 <link href="{!! asset('/css/coralbeach/coralbeach-style.css') !!}" rel='stylesheet' />
-<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+
 @stop
 @section('content')
 <!--page-cover   -->
 <section class="sp-page-title row">
     <div class="container">
-        <h2>images</h2>
+        <h2>documents</h2>
         <ol class="breadcrumb">
             <li><span>You are here: &nbsp;</span></li>
             <li><a href="{{ route('mediaroom.home') }}" class="pathway" target="_parent">Home</a></li>
-            <li class="active">images</li>
+            <li class="active">documents</li>
         </ol>
     </div>
 </section>
-<section class="sp-main-body" id="app-images">
+<section class="sp-main-body" id="app-documents">
     <div class="container">
         <div class="row">
             <div class="col-sm-8 blog-area">
                
 
                 <!--Grid row-->
-                <div class="row">
+                <div class="row text-center">
                     <!--Grid column-->
-                    <div class="col-md-3" v-for="area in areas">
-                    <h6 >@{{ area.nameArea }}</h6>
-                    <a :href="'/mediaroom/images/' + area.idArea +'/area'"><img class="circle-img z-depth-2"  :src="area.thumbnail"
-                        data-holder-rendered="true"></a>
+                    <div class="col-md-3" v-for="document in documents">
+                    <i :class="document.icono"></i>
+                        <h6 >@{{ document.name }}</h6>
+                       <a href="#" class="btn btn-primary">Download</a>
                     </div>
                     <!--Grid column-->
                     
@@ -40,16 +40,18 @@
                 <div class="column">
                    
                     <div class="module ">
-                        <h3 class="module-title">Catagories</h3>
+                        <h3 class="module-title">Areas</h3>
                         <div class="module-content">
                             <ul class="categories-module">
                                 @foreach ($categories as $item)
+                                @foreach ($item->areas as $item)
                                 <li>
-                                    <a href="{{ route('mediaroom.images.index',['idCategory' => $item->idCategory ]) }}">
-                                        <span class="ti-arrow-right"></span> {{ $item->nameCategory }} ( {{ count($item->areas)  }} )
+                                    <a href="{{ route('mediaroom.documents.index',['idArea' => $item->idArea ]) }}">
+                                        <span class="ti-arrow-right"></span> {{ $item->nameArea }}
                                     </a>
 
                                 </li>
+                                @endforeach
                                 @endforeach
                                 
                                
@@ -66,5 +68,5 @@
 </section>
 @endsection
 @section('scripts')
-<script src="{!! asset('/vue/mediaroom/images.vue') !!}" type="text/javascript"></script>
+<script src="{!! asset('/vue/mediaroom/documents.vue') !!}" type="text/javascript"></script>
 @stop

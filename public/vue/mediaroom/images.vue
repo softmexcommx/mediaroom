@@ -9,10 +9,11 @@ var vm = new Vue({
   methods: {    
     getAreas: function() {      
       axios
-        .get('/mediaroom/images/select/areas' )
+        .get('/mediaroom/images/select/areas', { params:{
+          idCategory: laraveljs.idCategory
+        }} )
         .then(response => {
-          this.areas = response.data;
-          console.log(this.areas);
+          this.areas = response.data;          
         })
         .then(response => {
       

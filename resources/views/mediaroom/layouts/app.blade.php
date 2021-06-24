@@ -58,6 +58,8 @@
 
     @include('mediaroom.layouts.footer')
 
+    @include('layouts.js')
+
     <!-- Mainly scripts -->
     <script src="{!! asset('/probiz/js/jquery-2.1.4.min.js') !!}"></script>
     <script src="{!! asset('/probiz/js/bootstrap.min.js') !!}"></script>

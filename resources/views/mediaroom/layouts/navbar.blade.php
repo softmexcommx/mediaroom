@@ -16,7 +16,10 @@
         <div class="collapse navbar-collapse" id="main_nav">
             <a class="offcanvas-toggler" href="#"><i class="fa fa-bars"></i></a>
             <ul class="nav navbar-nav">
-                <li><a href="{{ route('home') }}">Home</a></li>
+                <li><a href="{{ route('mediaroom.home') }}">Home</a></li>
+                <li><a href="{{ route('mediaroom.images.index') }}">Images</a></li>
+                <li><a href="{{ route('mediaroom.documents.index') }}">Documents</a></li>
+                <li><a href="{{ route('mediaroom.videos.index') }}">Videos</a></li>
                 <li><a href="#">Contact</a></li>
              
             </ul>
@@ -31,6 +34,9 @@
     <h3 class="sp-module-title">MEDIA ROOM</h3>
     <ul class="nav menu" id="offcanvas-inner-menu">
         <li><a href="{{ route('mediaroom.home') }}">Home</a></li>
+        <li><a href="{{ route('mediaroom.images.index') }}">Images</a></li>
+        <li><a href="{{ route('mediaroom.documents.index') }}">Documents</a></li>
+        <li><a href="{{ route('mediaroom.videos.index') }}">Videos</a></li>
         <li><a href="#">Contact</a></li>
 
     </ul>

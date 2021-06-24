@@ -47,7 +47,7 @@
     <div class="row">
         <div class="col-sm-4 work-01">
             <div class="work-process">
-                <h2 class="work-title"><a href="{{ route('mediaroom.images.index') }}" class="text-white"><i class="fa fa-picture-o text-white"></i></a></h2>
+                <h2 class="work-title"><a href="{{ route('mediaroom.images.index') }}" style="color:white;"><i class="fa fa-picture-o text-white"></i></a></h2>
                 <h3>Pictures</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer adipiscing erat eget risus
                     sollicitudin pellentesque.</p>
@@ -55,7 +55,7 @@
         </div>
         <div class="col-sm-4 work-02">
             <div class="work-process">
-                <h2 class="work-title"><i class="fa fa-file-pdf-o"></i></h2>
+                <h2 class="work-title"><a href="{{ route('mediaroom.documents.index') }}" style="color:white;"><i class="fa fa-file-pdf-o"></i></a></h2>
                 <h3>Documents</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer adipiscing erat eget risus
                     sollicitudin pellentesque.</p>
@@ -63,7 +63,7 @@
         </div>
         <div class="col-sm-4 work-03">
             <div class="work-process">
-                <h2 class="work-title"><i class="fa fa-video-camera"></i></h2>
+                <h2 class="work-title"><a href="{{ route('mediaroom.videos.index') }}" style="color:white;"><i class="fa fa-video-camera text-white"></i></a></h2>
                 <h3>Videos</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer adipiscing erat eget risus
                     sollicitudin pellentesque.</p>

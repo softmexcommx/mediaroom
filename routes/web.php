@@ -25,10 +25,25 @@ Route::group(['middleware' => 'cors', 'prefix' => 'mediaroom'], function () {
     Route::get('home', ['as' => 'mediaroom.home', 'uses' => 'MediaRoom\HomeController@index']);
 
     Route::group(['middleware' => 'cors', 'prefix' => 'images'], function () {
-        Route::get('/', ['as' => 'mediaroom.images.index', 'uses' => 'MediaRoom\ImageController@index']);
-            
+        Route::get('/{idCategory?}', ['as' => 'mediaroom.images.index', 'uses' => 'MediaRoom\ImageController@index']);      
+                 Route::get('/{idArea}/area', ['as' => 'mediaroom.images.area', 'uses' => 'MediaRoom\ImageController@area']);      
+
             Route::group(['middleware' => 'cors', 'prefix' => 'select'], function () {
-                Route::get('areas', ['as' => 'mediaroom.images.areas', 'uses' => 'MediaRoom\ImageController@getAreas']);
+                Route::get('areas', ['as' => 'mediaroom.images.select.areas', 'uses' => 'MediaRoom\ImageController@getAreas']);        
+            });
+    });
+
+    Route::group(['middleware' => 'cors', 'prefix' => 'documents'], function () {        
+        Route::get('/{idArea?}', ['as' => 'mediaroom.documents.index', 'uses' => 'MediaRoom\DocumentController@index']);            
+            Route::group(['middleware' => 'cors', 'prefix' => 'select'], function () {                
+                Route::get('areas', ['as' => 'mediaroom.documents.areas', 'uses' => 'MediaRoom\DocumentController@getDocuments']);
+            });
+    });
+
+    Route::group(['middleware' => 'cors', 'prefix' => 'videos'], function () {        
+        Route::get('/{idArea?}', ['as' => 'mediaroom.videos.index', 'uses' => 'MediaRoom\VideoController@index']);            
+            Route::group(['middleware' => 'cors', 'prefix' => 'select'], function () {                
+                Route::get('areas', ['as' => 'mediaroom.videos.areas', 'uses' => 'MediaRoom\VideoController@getVideos']);
             });
     });
 

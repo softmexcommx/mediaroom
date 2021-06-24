@@ -71,6 +71,7 @@
                                         </div>
                                     </td>
                                     <td>@{{ item.nameCategory }}</td>
+                                    <td>@{{ item.slug }}</td>
                                     
                                    
                                     <td><a href="#" v-on:click.prevent="getAreas(item.idCategory)"
@@ -135,8 +136,7 @@
                                     </td>
                                     <td>@{{ item.nameArea }}</td>
                                     <td>@{{ item.slug }}</td>
-                                    <td><a href="#" v-on:click.prevent="getFiles(item.idArea)"
-                                        class="btn btn-default btn-sm"><i class="fa fa-arrow-right"></i></a></td>
+                                  
                                 </tr>
 
                             </tbody>

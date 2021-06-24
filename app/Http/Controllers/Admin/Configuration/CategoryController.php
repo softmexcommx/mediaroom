@@ -22,7 +22,7 @@ class CategoryController extends Controller
     public function index()
     {
         $categories = DB::table('cat_categories')
-            ->select('cat_categories.idCategory', 'cat_categories.nameCategory', 'cat_categories.edo')            
+            ->select('cat_categories.idCategory', 'cat_categories.nameCategory', 'cat_categories.slug', 'cat_categories.edo')            
             ->where('edo', true)
             ->get();
         return response()->json($categories);

@@ -9,10 +9,10 @@
                 <ul class="sp-contact-info nav">
                    
                     <li class="sp-contact-phone">
-                        <i class="fa fa-users"></i>
+                        <i class="fa fa-user"></i>
                         <p class="contact-content">
                             <span class="contact-title">{!! Auth::user()->name !!}</span>
-                           <span> <a href="#">Profile</a> |  <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form2').submit();">Sign out</a></span>
+                           <span> <a class="contact-title" href="#">Profile</a> |  <a href="#" class="contact-title" onclick="event.preventDefault(); document.getElementById('logout-form2').submit();">Sign out</a></span>
                         </p>
                     </li>
                    
